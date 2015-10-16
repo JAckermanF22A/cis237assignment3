@@ -9,16 +9,52 @@ namespace cis237assignment3
     class Droid : IDroid
     {
         //Variables
-        private string material;
-        private string model;
-        private string color;
-        private double baseCost;
-        private double totalCost;
+        protected string material;
+        protected string model;
+        protected string color;
+        protected decimal baseCost;
+        protected decimal totalCost;
 
         //Constructor
-        public Droid()
+        public Droid(string Material, string Model, string Color)
         {
+            this.material = Material;
+            this.model = Model;
+            this.color = Color;
+        }
 
+        public decimal TotalCost
+        {
+            get { return totalCost; }
+            set { totalCost = value; }
+        }
+
+        public void CalculateBaseCost(string droidMaterial)
+        {
+            switch (droidMaterial)
+            {
+                case "titanium":
+                    baseCost = 999.99m;
+                    break;
+                case "tin":
+                    baseCost = 9.99m;
+                    break;
+                case "flesh": //It's an android or something
+                    baseCost = 2499.99m;
+                    break;
+            }
+        }
+
+        public virtual void CalculateTotalCost()
+        {
+            totalCost = baseCost;
+        }
+
+        public override string ToString()
+        {
+            CalculateBaseCost(material);
+            CalculateTotalCost();
+            return this.model + " " + this.material + " " + this.color + " " + this.totalCost.ToString("C");   
         }
     }
 }
