@@ -25,7 +25,8 @@ namespace cis237assignment3
         {
             CalculateBaseCost(material);
             CalculateTotalCost();
-            return this.model + " " + this.material + " " + this.color + " " + this.numberOfLanguages + " " + this.totalCost.ToString("C");  
+            return this.model.PadRight(10) + " | " + this.material.PadRight(8) + " | " + this.color.PadRight(5) + " | " + this.numberOfLanguages.ToString().PadRight(6) + " | ".PadRight(11)
+                + " | ".PadRight(18) + " | ".PadRight(6) + " | ".PadRight(18) + " | ".PadRight(9) + " | ".PadRight(20) + " | ".PadRight(10) + " | " + this.totalCost.ToString("C");
         }
     }
 }

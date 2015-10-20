@@ -49,32 +49,37 @@ namespace cis237assignment3
             CalculateTotalCost();
 
             string tempString;
-            tempString = this.model + " " + this.material + " " + this.color;
+            tempString = this.model.PadRight(10) + " | " + this.material.PadRight(8) + " | " + this.color.PadRight(5);
+
+            tempString += " | ".PadRight(9);
 
             if (toolBox == true)
             {
-                tempString += " " + "Y";
+                tempString += " | " + "Y".PadRight(8);
             }
             else
             {
-                tempString += " " + "N";
+                tempString += " | " + "N".PadRight(8);
             }
+
             if (computerConnection == true)
             {
-                tempString += " " + "Y";
+                tempString += " | " + "Y".PadRight(15);
             }
             else
             {
-                tempString += " " + "N";
+                tempString += " | " + "N".PadRight(15);
             }
             if (arm == true)
             {
-                tempString += " " + "Y";
+                tempString += " | " + "Y".PadRight(3);
             }
             else
             {
-                tempString += " " + "N";
+                tempString += " | " + "N".PadRight(3);
             }
+
+            tempString += " | ".PadRight(18) + " | ".PadRight(9) + " | ".PadRight(20) + " | ".PadRight(10) + " | " + this.totalCost.ToString("C");
 
             return tempString;
         }

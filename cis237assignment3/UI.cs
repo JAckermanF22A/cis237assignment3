@@ -19,7 +19,6 @@ namespace cis237assignment3
         private bool tempVacuum;
         private bool tempFireExtinguisher;
         private int tempNumberShips;
-        private bool error;
 
         public string userInput;
 
@@ -167,12 +166,31 @@ namespace cis237assignment3
         {
             displayedCounter = 0;
             int lengthOfArray = Program.droidCollection.droidArray.Count(x => x != null);
+            PrintHeader();
             while(displayedCounter < lengthOfArray)
             {
-                Console.WriteLine(Program.droidCollection.droidArray[displayedCounter]);
+                /*switch (userInput)
+                {
+                    case "Protocol":
+                        PrintProtocol();
+                        break;
+                    default:
+                        Console.WriteLine("Not Implemented Yet");
+                        break;
+                }*/
+
+                Console.WriteLine(Program.droidCollection.droidArray[displayedCounter].ToString());
+                
+                
+                //Console.WriteLine(Program.droidCollection.droidArray[displayedCounter]);
                 displayedCounter++;
             }
         }
 
+        private void PrintHeader()
+        {
+            Console.WriteLine("------------------------------------------------------------------------------------------");
+            Console.WriteLine("Model      | Material | Color | # Lang | Tool Box | Comp Connection | Arm | Trash Compactor | Vacuum | Fire Extinguisher | Ship #s | Total Cost");
+        }
     }
 }

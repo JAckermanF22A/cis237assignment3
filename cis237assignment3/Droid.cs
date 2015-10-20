@@ -36,8 +36,8 @@ namespace cis237assignment3
                 case "titanium":
                     baseCost = 999.99m;
                     break;
-                case "tin":
-                    baseCost = 9.99m;
+                case "steel":
+                    baseCost = 199.99m;
                     break;
                 case "flesh": //It's an android or something
                     baseCost = 2499.99m;

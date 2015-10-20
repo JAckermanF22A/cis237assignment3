@@ -37,11 +37,13 @@ namespace cis237assignment3
         public void AddJanitor(string Model, string Material, string Color, bool ToolBox, bool ComputerConnection, bool Arm, bool TrashCompactor, bool Vacuum)
         {
             droidArray[counter] = new Janitor(Material, Model, Color, ToolBox, ComputerConnection, Arm, TrashCompactor, Vacuum);
+            counter++;
         }
 
         public void AddAstromech(string Model, string Material, string Color, bool ToolBox, bool ComputerConnection, bool Arm, bool FireExtinguisher, int NumberShips)
         {
             droidArray[counter] = new Astromech(Material, Model, Color, ToolBox, ComputerConnection, Arm, FireExtinguisher, NumberShips);
+            counter++;
         }
     }
 }
