@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//Jacob Ackerman
+
 namespace cis237assignment3
 {
     class Program
@@ -13,7 +15,7 @@ namespace cis237assignment3
 
         static void Main(string[] args)
         {
-            Console.SetWindowSize(150, 40); //Expands the console for easier viewing!
+            Console.SetWindowSize(150, 40); //Expands the console so everything fits.
 
             droidCollection.AddAstromech("Astromech", "steel", "Red", true, true, true, true, 5);
             droidCollection.AddJanitor("Janitor", "titanium", "Grey", true, false, true, true, true);
@@ -36,8 +38,14 @@ namespace cis237assignment3
                     case "Print Droids":
                         ui.PrintArray();
                         break;
+                    case "Print Menu":
+                        ui.PrintMenu();
+                        break;
                     case "exit":
-                        //We out.
+                        //Exits the loop
+                        break;
+                    default:
+                        ui.MenuError();
                         break;
                 }
             }

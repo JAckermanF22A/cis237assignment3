@@ -12,12 +12,14 @@ namespace cis237assignment3
         protected bool toolBox;
         protected bool computerConnection;
         protected bool arm;
+        
+        //Constants
         protected const decimal toolCost = 74.99m;
         protected const decimal compConnectionCost = 25.00m;
         //private const string armCost = "a leg"
         protected const decimal armCost = 2499.99m;
 
-        //Constructor
+        //Constructor, inherits from Droid base
         public Utility(string Material, string Model, string Color, bool ToolBox, bool ComputerConnection, bool Arm) : base(Material, Model, Color)
         {
             this.toolBox = ToolBox;
@@ -25,6 +27,7 @@ namespace cis237assignment3
             this.arm = Arm;
         }
 
+        //Methods
         public override void CalculateTotalCost()
         {
             totalCost = baseCost;

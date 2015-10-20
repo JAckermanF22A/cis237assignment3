@@ -8,18 +8,22 @@ namespace cis237assignment3
 {
     class Janitor : Utility
     {
+        //Variables
         private bool trashCompactor;
         private bool vacuum;
 
-        private decimal compactorCost = 174.99m;
-        private decimal vacuumCost = 24.99m;
+        //Constants
+        private const decimal compactorCost = 174.99m;
+        private const decimal vacuumCost = 24.99m;
 
+        //Constructor, inherits from Utility base
         public Janitor(string Material, string Model, string Color, bool ToolBox, bool ComputerConnection, bool Arm, bool TrashCompactor, bool Vacuum) : base(Material, Model, Color, ToolBox, ComputerConnection, Arm)
         {
             this.trashCompactor = TrashCompactor;
             this.vacuum = Vacuum;
         }
 
+        //Methods
         public override void CalculateTotalCost()
         {
             totalCost = baseCost;

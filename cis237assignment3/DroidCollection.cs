@@ -8,11 +8,9 @@ namespace cis237assignment3
 {
     class DroidCollection
     {
-        public string model;
-        private string material;
-        private string color;
-
+        //The Array
         public IDroid[] droidArray;
+        //Variables
         private int counter;
 
         public DroidCollection()
@@ -22,6 +20,7 @@ namespace cis237assignment3
 
         }
 
+        //Different methods for different model types. 
         public void AddProtocol(string Model, string Material, string Color, int NumberOfLanguages)
         {
             droidArray[counter] = new Protocol(Material, Model, Color, NumberOfLanguages);

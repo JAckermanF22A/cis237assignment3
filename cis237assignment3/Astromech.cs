@@ -8,18 +8,22 @@ namespace cis237assignment3
 {
     class Astromech : Utility
     {
+        //Variables
         private bool fireExtinguisher;
         private int numberShips;
 
-        const decimal costPerShip = 129.99m;
-        private decimal fireExtinguisherCost = 49.99m;
+        //Constants
+        private const decimal costPerShip = 129.99m;
+        private const decimal fireExtinguisherCost = 49.99m;
 
+        //Constructor, inherits from Utility base.
         public Astromech(string Material, string Model, string Color, bool ToolBox, bool ComputerConnection, bool Arm, bool FireExtinguisher, int NumberShips) : base(Material, Model, Color, ToolBox, ComputerConnection, Arm)
         {
             this.fireExtinguisher = FireExtinguisher;
             this.numberShips = NumberShips;
         }
 
+        //Methods
         public override void CalculateTotalCost()
         {
             totalCost = baseCost;

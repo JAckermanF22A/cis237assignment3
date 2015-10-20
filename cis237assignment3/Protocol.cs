@@ -8,14 +8,19 @@ namespace cis237assignment3
 {
     class Protocol : Droid
     {
+        //Variables
         private int numberOfLanguages;
+
+        //Constants
         const decimal costPerLanguage = 250m;
 
+        //Constructor, inherits from Droid base.
         public Protocol(string Material, string Model, string Color, int NumberOfLanguages) : base(Material, Model, Color)
         {
             this.numberOfLanguages = NumberOfLanguages;
         }
 
+        //Methods
         public override void CalculateTotalCost()
         {
             totalCost = (numberOfLanguages * costPerLanguage) + baseCost;

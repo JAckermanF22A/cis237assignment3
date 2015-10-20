@@ -23,6 +23,7 @@ namespace cis237assignment3
             this.color = Color;
         }
 
+        //Methods
         public decimal TotalCost
         {
             get { return totalCost; }
@@ -39,7 +40,7 @@ namespace cis237assignment3
                 case "steel":
                     baseCost = 199.99m;
                     break;
-                case "flesh": //It's an android or something
+                case "iron":
                     baseCost = 2499.99m;
                     break;
             }
