@@ -98,3 +98,5 @@ It may be benificial for you to create extra methods within the droid sub classe
 ## Known Problems, Issues, And/Or Errors in the Program
 Validation isn't great, you can enter wrong material information and it'll accept it causing the base cost to be 0. At any point where it does find a problem
 with the input then it loops back to the menu without adding anything rather than waiting for the user to put in something correct.
+
+Also sorry for the probably not so great comments. I'm never sure what would be redundant or actually helpful.
